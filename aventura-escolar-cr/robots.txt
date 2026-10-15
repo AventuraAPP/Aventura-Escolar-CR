@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Actualice esta URL tras publicar el sitio en su dominio definitivo.
-Sitemap: https://TU-DOMINIO.com/sitemap.xml
+Sitemap: https://aventuraapp.github.io/Aventura-Escolar-CR/sitemap.xml
