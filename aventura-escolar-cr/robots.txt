@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Actualice esta URL tras publicar el sitio en su dominio definitivo.
+Sitemap: https://TU-DOMINIO.com/sitemap.xml

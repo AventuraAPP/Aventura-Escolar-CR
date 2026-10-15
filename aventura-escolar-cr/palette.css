@@ -1,0 +1,53 @@
+/* Paleta oficial tomada del logo: azul, celeste, verde, amarillo, rojo y crema. */
+:root {
+  --ink: #0a2a6a;
+  --cream: #fff9eb;
+  --lime: #f6bd19;
+  --purple: #1749ac;
+  --blue: #0075b5;
+  --orange: #d9272e;
+  --muted: #355382;
+}
+
+body { color: var(--ink); }
+.site-header.scrolled { background: rgba(255, 249, 235, .92); }
+.brand b, .brand i { color: var(--ink); }
+.brand-mark { background: var(--ink); }
+.aurora-one { background: rgba(0, 117, 181, .18); }
+.aurora-two { background: rgba(246, 189, 25, .24); }
+.orbit { border-color: rgba(0, 117, 181, .4); }
+.pulse { background: var(--lime); box-shadow: 0 0 0 5px rgba(246, 189, 25, .18); }
+h1 em, h2 em { color: var(--blue); }
+.button:hover { background: var(--blue); }
+.chip-one { color: var(--ink); }.chip-two { color: #16733a; }
+
+.feature-purple { background: var(--ink); }
+.feature-lime { background: var(--lime); color: var(--ink); }
+.feature-blue { background: var(--blue); color: #fff; }
+.feature-blue .bars i { background: var(--lime); }.feature-blue .bars i:nth-child(4) { background: #fff; }
+.chat-demo { color: var(--ink); }.chat-demo span { color: var(--muted); }
+.coin-stack i { background: #fff9eb; border-color: var(--lime); color: var(--ink); }
+.coin-stack i:nth-child(2) { background: var(--blue); border-color: var(--ink); }
+
+.spanish { background: var(--ink); color: #fff; }
+.math { background: var(--lime); color: var(--ink); }
+.science { background: #168a48; color: #fff; }
+.social { background: var(--orange); color: #fff; }
+.subject { box-shadow: inset 0 0 0 1px rgba(10, 42, 106, .08); }
+
+.simulator-section { background: var(--ink); }
+.quiz-card { background: var(--cream); box-shadow: 17px 18px 0 var(--lime); }
+.quiz-top b, .quiz-card button:hover { color: var(--blue); }
+.quiz-card button:hover { border-color: var(--blue); }
+.quiz-progress i { background: var(--lime); }
+
+.gallery-video { background: var(--blue); }.gallery-video span { background: var(--lime); }
+.press-card { background: #e6f4ef; box-shadow: inset 0 0 0 2px #168a48; }
+.press-mark { background: var(--ink); color: var(--lime); }
+.press-card a { color: var(--ink); }
+.download-inner { background: var(--ink); }.download-inner h2 em { color: var(--lime); }
+.download-inner .eyebrow, .download-inner>p:not(.eyebrow):not(.trial-note), .trial-note { color: #fff9eb; }
+.store-button { border-color: var(--lime); }.store-button:hover { background: var(--blue); }
+.ticker { background: var(--ink); color: var(--lime); }.ticker b { color: #fff; }
+
+@media (max-width: 800px) { .site-header.scrolled { background: rgba(255, 249, 235, .96); } }
