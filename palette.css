@@ -45,9 +45,14 @@ h1 em, h2 em { color: var(--blue); }
 .press-card { background: #e6f4ef; box-shadow: inset 0 0 0 2px #168a48; }
 .press-mark { background: var(--ink); color: var(--lime); }
 .press-card a { color: var(--ink); }
+.press-featured { padding-top: 8px; padding-bottom: 54px; }
+.press-featured .press-card { position: relative; background: linear-gradient(120deg, #e6f4ef 0%, #fff9eb 62%, #d9effa 100%); box-shadow: inset 0 0 0 2px #168a48, 0 20px 38px rgba(10, 42, 106, .12); }
+.press-featured .press-card::before { content: 'REPORTAJE DESTACADO'; position: absolute; right: 30px; top: 18px; color: rgba(10, 42, 106, .15); font: 800 11px 'DM Sans', sans-serif; letter-spacing: 1.6px; }
+.press-badge { display: inline-block; margin-right: 8px; padding: 4px 8px; border-radius: 999px; background: var(--orange); color: #fff; font-size: 9px; letter-spacing: 1px; }
 .download-inner { background: var(--ink); }.download-inner h2 em { color: var(--lime); }
 .download-inner .eyebrow, .download-inner>p:not(.eyebrow):not(.trial-note), .trial-note { color: #fff9eb; }
 .store-button { border-color: var(--lime); }.store-button:hover { background: var(--blue); }
 .ticker { background: var(--ink); color: var(--lime); }.ticker b { color: #fff; }
 
 @media (max-width: 800px) { .site-header.scrolled { background: rgba(255, 249, 235, .96); } }
+@media (max-width: 800px) { .press-featured { padding-top: 0; padding-bottom: 34px; } .press-featured .press-card::before { right: 20px; top: 13px; font-size: 9px; } }
