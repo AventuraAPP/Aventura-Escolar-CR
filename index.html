@@ -85,9 +85,25 @@
 
     <section class="ticker" aria-label="Temas destacados"><div><span>JUGAR</span><b>✦</b><span>APRENDER</span><b>✦</b><span>PRACTICAR</span><b>✦</b><span>SUPERARSE</span><b>✦</b><span>JUGAR</span><b>✦</b><span>APRENDER</span><b>✦</b></div></section>
 
-    <section class="intro section-shell" id="como-funciona">
-      <div class="intro-label">UNA EXPERIENCIA DIFERENTE</div>
-      <div><h2>De la duda al <em>“¡sí puedo!”</em></h2><p>Aprender no es memorizar por memorizar. Es comprender, probar, equivocarse y volver a intentarlo. Aventura Escolar CR acompaña ese camino con una experiencia clara, entretenida y pensada para escolares.</p></div>
+    <section class="intro section-shell" id="como-funciona" aria-labelledby="mision-titulo">
+      <div class="intro-copy">
+        <p class="intro-label">MODO AVENTURA ACTIVADO</p>
+        <h2 id="mision-titulo">De la duda al <em>“¡sí puedo!”</em></h2>
+        <p>En Aventura Escolar CR cada pregunta abre una misión. Explorá, practicá y celebrá tus avances a tu propio ritmo, con retos que hacen del estudio una aventura.</p>
+        <div class="mission-steps" aria-label="Elige una etapa de la aventura">
+          <button class="mission-step active" type="button" data-mission="explora" aria-pressed="true"><span>01</span> Explorar</button>
+          <button class="mission-step" type="button" data-mission="practica" aria-pressed="false"><span>02</span> Practicar</button>
+          <button class="mission-step" type="button" data-mission="avanza" aria-pressed="false"><span>03</span> Avanzar</button>
+        </div>
+      </div>
+      <aside class="mission-console" aria-live="polite">
+        <div class="mission-console-top"><span>✦ MI AVENTURA</span><b id="mission-xp">+ 10 XP</b></div>
+        <div class="mission-orbit"><span class="mission-icon" id="mission-icon">🔎</span><i></i><i></i><i></i></div>
+        <p class="mission-kicker" id="mission-kicker">PRIMERA PISTA</p>
+        <h3 id="mission-title">Descubrí el reto</h3>
+        <p id="mission-copy">Elegí una materia, hacé una pregunta y empezá a construir confianza paso a paso.</p>
+        <div class="mission-progress"><span id="mission-progress-label">Misión 1 de 3</span><div><i id="mission-progress-bar"></i></div></div>
+      </aside>
     </section>
 
     <section class="feature-grid section-shell">

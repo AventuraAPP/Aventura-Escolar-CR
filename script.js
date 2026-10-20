@@ -12,6 +12,24 @@ lightbox.querySelector('button').addEventListener('click', closeLightbox);
 lightbox.addEventListener('click', event => { if (event.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', event => { if (event.key === 'Escape') closeLightbox(); });
 
+const missionContent = {
+  explora: { icon: '🔎', kicker: 'PRIMERA PISTA', title: 'Descubrí el reto', copy: 'Elegí una materia, hacé una pregunta y empezá a construir confianza paso a paso.', xp: '+ 10 XP', progress: '34%', label: 'Misión 1 de 3' },
+  practica: { icon: '🎯', kicker: 'MODO PRÁCTICA', title: 'Probá tus ideas', copy: 'Resolvé retos cortos, recibí pistas y aprendé de cada intento sin compararte con nadie.', xp: '+ 25 XP', progress: '67%', label: 'Misión 2 de 3' },
+  avanza: { icon: '🏆', kicker: 'NUEVO LOGRO', title: '¡Misión cumplida!', copy: 'Celebrá lo que aprendiste y elegí la próxima aventura para seguir avanzando.', xp: '+ 50 XP', progress: '100%', label: 'Misión 3 de 3' }
+};
+const missionSteps = document.querySelectorAll('.mission-step');
+missionSteps.forEach(step => step.addEventListener('click', () => {
+  const mission = missionContent[step.dataset.mission];
+  missionSteps.forEach(item => { const active = item === step; item.classList.toggle('active', active); item.setAttribute('aria-pressed', active); });
+  document.querySelector('#mission-icon').textContent = mission.icon;
+  document.querySelector('#mission-kicker').textContent = mission.kicker;
+  document.querySelector('#mission-title').textContent = mission.title;
+  document.querySelector('#mission-copy').textContent = mission.copy;
+  document.querySelector('#mission-xp').textContent = mission.xp;
+  document.querySelector('#mission-progress-label').textContent = mission.label;
+  document.querySelector('#mission-progress-bar').style.width = mission.progress;
+}));
+
 const labTabs = document.querySelectorAll('.lab-tab');
 const labPanels = document.querySelectorAll('.lab-panel');
 labTabs.forEach(tab => tab.addEventListener('click', () => {

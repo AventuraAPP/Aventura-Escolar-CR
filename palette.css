@@ -54,5 +54,27 @@ h1 em, h2 em { color: var(--blue); }
 .store-button { border-color: var(--lime); }.store-button:hover { background: var(--blue); }
 .ticker { background: var(--ink); color: var(--lime); }.ticker b { color: #fff; }
 
+/* Consola interactiva: la ruta de una misión escolar. */
+.intro { grid-template-columns: 1.05fr .95fr; align-items: center; gap: 72px; }
+.intro-copy > p:not(.intro-label) { max-width: 610px; }
+.mission-steps { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 30px; }
+.mission-step { border: 1px solid rgba(10, 42, 106, .16); background: #fff; color: var(--ink); border-radius: 999px; padding: 10px 14px; font: 800 12px 'DM Sans', sans-serif; cursor: pointer; transition: transform .2s, background .2s, color .2s, box-shadow .2s; }
+.mission-step span { color: var(--blue); font-size: 10px; margin-right: 5px; }
+.mission-step:hover, .mission-step.active { transform: translateY(-2px); background: var(--ink); color: #fff; box-shadow: 0 8px 16px rgba(10, 42, 106, .18); }
+.mission-step.active span { color: var(--lime); }
+.mission-console { position: relative; overflow: hidden; padding: 25px 29px 27px; min-height: 365px; border-radius: 25px; background: linear-gradient(145deg, var(--ink), #0b5d9f); color: #fff; box-shadow: 0 20px 42px rgba(10, 42, 106, .22); }
+.mission-console::before { content: ''; position: absolute; width: 280px; height: 280px; right: -125px; top: -130px; border: 1px solid rgba(255,255,255,.23); border-radius: 50%; box-shadow: 0 0 0 34px rgba(255,255,255,.04), 0 0 0 68px rgba(255,255,255,.025); }
+.mission-console-top { position: relative; display: flex; align-items: center; justify-content: space-between; font-size: 10px; letter-spacing: 1.25px; font-weight: 900; }
+.mission-console-top b { padding: 7px 10px; border-radius: 999px; color: var(--ink); background: var(--lime); letter-spacing: .4px; }
+.mission-orbit { width: 113px; height: 113px; margin: 26px auto 18px; border: 1px dashed rgba(255,255,255,.55); border-radius: 50%; display: grid; place-items: center; position: relative; animation: missionSpin 18s linear infinite; }
+.mission-icon { width: 70px; height: 70px; display: grid; place-items: center; border-radius: 23px; background: var(--lime); font-size: 31px; box-shadow: 0 10px 18px rgba(0,0,0,.18); animation: missionCounterSpin 18s linear infinite; }
+.mission-orbit i { position: absolute; width: 9px; height: 9px; border-radius: 50%; background: #fff; }.mission-orbit i:nth-child(2) { top: 8px; left: 17px; }.mission-orbit i:nth-child(3) { right: -4px; bottom: 34px; background: var(--lime); }.mission-orbit i:nth-child(4) { left: 22px; bottom: -4px; background: #d9effa; }
+.mission-kicker { margin: 0; color: var(--lime); font-size: 10px; letter-spacing: 1.5px; font-weight: 900; text-align: center; }
+.mission-console h3 { margin-top: 6px; font-size: 31px; line-height: 1; text-align: center; letter-spacing: -.8px; }
+.mission-console > p:not(.mission-kicker) { margin: 12px auto 18px; max-width: 390px; text-align: center; color: #eef7ff; line-height: 1.5; font-size: 13px; }
+.mission-progress { position: relative; display: flex; align-items: center; gap: 12px; font-size: 10px; font-weight: 800; color: #d9effa; }.mission-progress > div { flex: 1; height: 7px; border-radius: 99px; overflow: hidden; background: rgba(255,255,255,.2); }.mission-progress i { display: block; width: 34%; height: 100%; border-radius: inherit; background: var(--lime); transition: width .35s ease; }
+@keyframes missionSpin { to { transform: rotate(360deg); } } @keyframes missionCounterSpin { to { transform: rotate(-360deg); } }
+
 @media (max-width: 800px) { .site-header.scrolled { background: rgba(255, 249, 235, .96); } }
 @media (max-width: 800px) { .press-featured { padding-top: 0; padding-bottom: 34px; } .press-featured .press-card::before { right: 20px; top: 13px; font-size: 9px; } }
+@media (max-width: 800px) { .intro { gap: 34px; } .mission-console { min-height: 350px; padding: 23px 20px; } .mission-step { flex: 1; min-width: 108px; padding: 10px 8px; } }
